@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link href="{{ asset('build/app.css') }}" rel="stylesheet"/>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                  </ul>
+            </div>
+        </header>
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
+        <script src="{{ asset('build/app.js') }}" crossorigin="anonymous"></script>        
+        {% block javascripts %}{% endblock %}        
+    </body>
+</html>
